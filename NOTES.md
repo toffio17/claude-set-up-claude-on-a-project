@@ -30,6 +30,10 @@ actually ignored. I removed the indentation and checked with
 `git check-ignore -v`.
 
 ## Verification
-- `/memory` shows `CLAUDE.md` loaded: _(to confirm)_
-- `/permissions` shows the allow / ask / deny rules: _(to confirm)_
-- Asked "How do I run the tests here?" and Claude answered `npm test` from `CLAUDE.md`: _(to confirm)_
+- **CLAUDE.md:** its contents were confirmed in a fresh session.
+- **Permissions:** `/permissions` shows the ASK (2) and DENY (6) rules from
+  `.claude/settings.json`, but the six ALLOW rules are not displayed, even
+  after accepting workspace trust for this folder. This is still unresolved.
+- **Tests:** `npm run lint` passed and all 4 tests passed (`npm test`).
+- **Asking Claude "How do I run the tests here?":** passed. In a fresh
+  session, Claude answered `npm test`.
